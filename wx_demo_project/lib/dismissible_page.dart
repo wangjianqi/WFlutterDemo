@@ -33,6 +33,7 @@ class _DismissiblePageState extends State<DismissiblePage> {
           ),
           onDismissed: (direction) {
             var _snackStr;
+            ///方向
             if (direction == DismissDirection.endToStart) {
               // 从右向左  也就是删除
               _snackStr = '删除了${_listData[index]}';

@@ -41,6 +41,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
+      ///路由
       routes: {
         'SafeAreaDemo': (context) => SafeAreaDemo(),
         'AnimatedContainerDemo': (context) => AnimatedContainerDemo(),

@@ -14,10 +14,10 @@ class _LongPressMenuPageState extends State<LongPressMenuPage> {
       ),
       body: Center(
         child: GestureDetector(
-          onLongPress: (){
+          onLongPress: () {
             Navigator.push(context, TestPopup());
           },
-          onPanUpdate: (details){
+          onPanUpdate: (details) {
             print('onPanUpdate --- ${details.globalPosition}');
           },
           child: Container(
@@ -31,8 +31,7 @@ class _LongPressMenuPageState extends State<LongPressMenuPage> {
   }
 }
 
-
-class TestPopup extends PopupRoute{
+class TestPopup extends PopupRoute {
   @override
   Color get barrierColor => null;
 
@@ -43,19 +42,20 @@ class TestPopup extends PopupRoute{
   String get barrierLabel => null;
 
   @override
-  Widget buildPage(BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
+  Widget buildPage(BuildContext context, Animation<double> animation,
+      Animation<double> secondaryAnimation) {
     return Center(
       child: GestureDetector(
-        onLongPress: (){
+        onLongPress: () {
           print('onLongPress');
         },
-        onPanUpdate: (details){
+        onPanUpdate: (details) {
           print('onPanUpdate --- ${details.globalPosition}');
         },
         child: Container(
           width: 100,
           height: 100,
-          color: Colors.black,
+          color: Colors.redAccent,
         ),
       ),
     );
@@ -64,5 +64,4 @@ class TestPopup extends PopupRoute{
   @override
   // TODO: implement transitionDuration
   Duration get transitionDuration => Duration.zero;
-
 }

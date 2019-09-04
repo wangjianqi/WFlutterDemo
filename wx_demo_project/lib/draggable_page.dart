@@ -27,6 +27,7 @@ class _DraggablePageState extends State<DraggablePage> {
                 ) {
               return _createGridView(_items2);
             },
+            ///接收
             onAccept: (String data) {
               setState(() {
                 _items2.add(data);
@@ -58,7 +59,7 @@ class _DraggablePageState extends State<DraggablePage> {
             });
           },
           childWhenDragging: Container(
-            color: Colors.blueAccent,
+            color: Colors.greenAccent,
             alignment: Alignment.center,
             foregroundDecoration: BoxDecoration(color: Colors.white30),
             child: Text(
@@ -70,7 +71,7 @@ class _DraggablePageState extends State<DraggablePage> {
             child: Container(
               height: 100,
               width: 100,
-              color: Colors.blueAccent,
+              color: Colors.redAccent,
               alignment: Alignment.center,
               child: Text(
                 _items[index],

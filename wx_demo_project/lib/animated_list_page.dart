@@ -27,6 +27,7 @@ class _AnimatedListPageState extends State<AnimatedListPage> {
         initialItemCount: _listData.length,
         itemBuilder: (context, index, anim) {
           return FadeTransition(
+            ///Drive
             opacity: anim.drive(_tween),
             child: GestureDetector(
               onLongPress: () {

@@ -176,6 +176,7 @@ RTS RPG与SLG结合的创新玩法，精致写实的画风，逼真的军事装�
     return GestureDetector(
       onPanDown: (details) {
         print('onPanDown');
+        ///缩放动画
         _animationController.forward();
       },
       onPanCancel: () {
@@ -189,6 +190,7 @@ RTS RPG与SLG结合的创新玩法，精致写实的画风，逼真的军事装�
                 return HeroDetailPage();
               },
               fullscreenDialog: true,
+              ///配置
               settings: RouteSettings(arguments: game)),
         );
         print('onTap');

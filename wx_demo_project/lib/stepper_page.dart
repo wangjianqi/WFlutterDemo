@@ -15,7 +15,9 @@ class _StepperPageState extends State<StepperPage> {
         appBar: AppBar(
           title: Text('StepperPage'),
         ),
-        body: _buildCustomStepper2());
+//        body: _buildCustomStepper2());
+        body: _buildStepper());
+//        body: _buildCustomStepper());
   }
 
 

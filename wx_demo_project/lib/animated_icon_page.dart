@@ -18,14 +18,14 @@ class _AnimatedIconPageState extends State<AnimatedIconPage>
       ..drive(Tween(begin: 0, end: 1))
       ..duration = Duration(milliseconds: 500);
 
-//    _controller.forward();
-//    _controller.addStatusListener((status) {
-//      if (status == AnimationStatus.completed) {
-//        _controller.reverse();
-//      } else if (status == AnimationStatus.dismissed) {
-//        _controller.forward();
-//      }
-//    });
+    /*_controller.forward();
+    _controller.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        _controller.reverse();
+      } else if (status == AnimationStatus.dismissed) {
+        _controller.forward();
+      }
+    });*/
 
     _names = [
       'play_pause',

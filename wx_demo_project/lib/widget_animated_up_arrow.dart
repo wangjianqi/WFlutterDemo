@@ -5,7 +5,8 @@ class AnimatedUpArrowWidget extends StatefulWidget {
   _AnimatedUpArrowWidgetState createState() => _AnimatedUpArrowWidgetState();
 }
 
-class _AnimatedUpArrowWidgetState extends State<AnimatedUpArrowWidget> with TickerProviderStateMixin {
+class _AnimatedUpArrowWidgetState extends State<AnimatedUpArrowWidget>
+    with TickerProviderStateMixin {
   AnimationController _animationController;
   Animation<double> _animation;
 
@@ -45,7 +46,6 @@ class AnimatedUpArrow extends AnimatedWidget {
   AnimatedUpArrow({Key key, Animation<double> animation})
       : super(key: key, listenable: animation);
 
-
   @override
   Widget build(BuildContext context) {
     final Animation<double> animation = listenable;
@@ -55,7 +55,11 @@ class AnimatedUpArrow extends AnimatedWidget {
           opacity: _opacityTween.evaluate(animation),
           child: Container(
             margin: EdgeInsets.only(bottom: _marginTween.evaluate(animation)),
-            child: Image.asset("images/UP.png", width: 20, height: 24,),
+            child: Image.asset(
+              "images/UP.png",
+              width: 20,
+              height: 24,
+            ),
           ),
         ),
       ),

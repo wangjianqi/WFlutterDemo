@@ -13,6 +13,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
   AnimationController _opacityController;
   Animation<double> _animation;
   double logoMargin = 160;
+  ///透明度动画
   Animation<double> _opacityAnimation;
 
   @override
@@ -36,6 +37,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
       backgroundColor: Color(0xFF0A0922),
       body: Stack(
         children: <Widget>[
+          ///Logo：透明度动画
           AnimatedBuilder(
             animation: _opacityAnimation,
             builder: (BuildContext context, Widget child) {
@@ -54,6 +56,8 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
               );
             },
           ),
+
+          ///Registrenren：按钮
           AnimatedBuilder(
             animation: _opacityAnimation,
             builder: (BuildContext context, Widget child) {
@@ -111,6 +115,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
               );
             },
           ),
+          ///Inloggen:按钮
           AnimatedBuilder(
             animation: _opacityAnimation,
             builder: (BuildContext context, Widget child) {
@@ -336,6 +341,7 @@ class AnimatedUserAgreement extends AnimatedWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30), color: Colors.white),
       child: Opacity(
+        ///透明度
         opacity: _opacityTween.evaluate(animation),
         child: Stack(
           children: <Widget>[
